@@ -1,8 +1,15 @@
 * {
-  color: red;
+  color: salmon;
   background-color: black;
+  font-family: arial;
+  text-align: center;
+  border-style: groove;
+  border-color: salmon;
 }
-body {
-  color: red;
-  background-color: white;
+img {
+  border-radius: 50%;
+}
+
+h1, p {
+  border-style: none;
 }
