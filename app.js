@@ -7,51 +7,51 @@ console.log('User Name is', userName);
 
 //Question 1
 var answer1 = prompt('Do I have a fluffy cat?').toLowerCase();
-console.log('Answer 1 is', answer1);
+console.log('Do I have a fluffy cat? User response to Answer 1:', answer1);
 
 //you must repeat answer1 on both sides or it will result in a truthy problem
-if(answer1 === 'n' || answer1 === 'no') {
-  alert('No no no no, I am sad to say you are wrong');
-} else {
+if(answer1 === 'y' || answer1 === 'yes') {
   alert('Yes! She moosh, she floof, she\'s very nice');
+} else {
+  alert('No no no no, I am sad to say you are wrong');
 }
 
 //Question 2
-var answer2 = prompt('Do I like karaoke?').toLowerCase();
-console.log('Answer 2 is', answer2);
+var answer2 = prompt('Do I hate karaoke?').toLowerCase();
+console.log('Do I hate karaoke? User response to Answer 2:', answer2);
 
 if(answer2 === 'n' || answer2 === 'no') {
-  alert('Are you serious!? Of course I love karaoke!');
+  alert('Yea you got it right! I love karaoke!');
 } else {
-  alert('Heck yea!');
+  alert('Awww, no I don\'t hate karaoke, it\'s the best!');
 }
 
 //Question 3
 var answer3 = prompt('Do I know how to sail a sailboat?').toLowerCase();
-console.log('Answer 3 is', answer3);
+console.log('Do I know how to sail a sailboat? User response to Answer 3:', answer3);
 
-if(answer3 === 'n' || answer3 === 'no') {
-  alert('Surprise! You\'re kinda wrong, I kinda know how ; )');
+if(answer3 === 'y' || answer3 === 'yes') {
+  alert('You know me so very kinda well, you are kinda right, I kinda know how!');
 } else {
-  alert('You know me so very kinda well, you are kinda right, I kinda know how!')
+  alert('Surprise! You\'re kinda wrong, I kinda know how ; )')
 }
 
 //Question 4
 var answer4 = prompt('Is my house the color of grass?').toLowerCase();
-console.log('Answer 4 is', answer4);
+console.log('Is my house the color of grass? User response to Answer 4:', answer4);
 
-if(answer4 === 'n' || answer4 === 'no') {
-  alert('Trick question! Depends on whether or not it\'s been raining! But basically you got the answer wrong.');
-} else {
+if(answer4 === 'y' || answer4 === 'yes') {
   alert('Yea, weirdo my house is green');
+} else {
+  alert('Trick question! Depends on whether or not it\'s been raining! But basically you got the answer wrong.');
 }
 
 //Question 5
 var answer5 = prompt('Do I like the rain?').toLowerCase();
-console.log('Answer 5 is', answer5);
+console.log('Do I like the rain? User response to Answer 5:', answer5);
 
-if(answer5 === 'n' || answer5 === 'no') {
-  alert('Hey now! I have to like it at least a little right?');
-} else {
+if(answer5 === 'y' || answer5 === 'yes') {
   alert('Yeaaaaa, yea I do : )');
+} else {
+  alert('Hey now! I have to like it at least a little right?');
 }
