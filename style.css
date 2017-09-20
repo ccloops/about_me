@@ -16,3 +16,13 @@ h1, h2, h3, p, a {
 h3 {
   color: white;
 }
+ol {
+  border-style: dashed;
+  margin: 20px;
+  padding: 20px 600px;
+}
+
+li {
+  border-style: none;
+  text-align: left;
+}
