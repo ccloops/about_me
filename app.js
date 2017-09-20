@@ -83,7 +83,7 @@ while (answer6 !== 25 && guessCount < 4) {
     alert('Nope! I\'m younger than you think! Try again.');
   }
   if(guessCount === 4) {
-    alert('Oh no! Too many guesses!');
+    alert('Oh no! You\'re all out of guesses! Better luck next time!');
   }
   console.log(guessCount, 'Guess Count');
 }
@@ -94,17 +94,17 @@ while (answer6 !== 25 && guessCount < 4) {
 if(score === 0) {
   alert('Booooooo! You answered 0 out of 7 questions correctly. I am so disappointed.');
 } else if(score === 1) {
-  alert('Terrible job. You answered 1 out of 7 questions correctly.');
+  alert('Terrible job,' + userName + '. You answered 1 out of 7 questions correctly.');
 } else if(score === 2) {
-  alert('Come on now, you can do better! You answered 2 out of 7 questions correctly.');
+  alert('Come on, ' + userName + ' you can do better! You answered 2 out of 7 questions correctly.');
 } else if(score === 3) {
-  alert('Slightly below average. You answered 3 out of 7 questions correctly.');
+  alert('Slightly below average, ' + userName + '. You answered 3 out of 7 questions correctly.');
 } else if(score === 4) {
-  alert('Not bad. You got more than 50% of the questions correct! You answered 4 out of 7 questions correctly.');
+  alert('Not bad, ' + userName + '. You got more than 50% of the questions correct! You answered 4 out of 7 questions correctly.');
 } else if(score === 5) {
-  alert('Congrats, you kind of know me! You answered 5 out of 7 questions correctly.');
+  alert('Congrats, ' + userName + ' you kind of know me! You answered 5 out of 7 questions correctly.');
 } else if(score === 6) {
-  alert('Almost! You almost won the game! You answered 6 out of 7 questions correctly.');
+  alert('Almost, ' + userName + '! You almost won the game! You answered 6 out of 7 questions correctly.');
 } else {
-  alert('Heck ya! You won! You answered all 7 questions correctly!');
+  alert('Heck ya! You won, ' + userName + '! You answered all 7 questions correctly!');
 }
