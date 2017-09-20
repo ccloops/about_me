@@ -67,44 +67,26 @@ var guessCount = 0;
 
 //Question 6
 
-do {var answer6 = parseInt(prompt('How old am I? You have 4 opportunities to answer correctly. Good luck'));
+while (answer6 !== 25 && guessCount < 4) {
+  var answer6 = parseInt(prompt('How old am I? You have 4 opportunities to answer correctly. Good luck'));
   console.log('How old am I? User response to Answer 6:', answer6);
 
   if(answer6 === 25) {
     guessCount++;
-    alert('Congratulations! You guessed correctly! I\'m 25 for now');
+    alert('Congratulations! You guessed correctly! I\'m 25 for now.');
     break;
   } else if(answer6 < 25) {
     guessCount++;
     alert('Nope! I\'m older than you think! Try again.');
   } else if(answer6 > 25) {
     guessCount++;
-    alert('Nope! I\'m younger than you think! Try again');
+    alert('Nope! I\'m younger than you think! Try again.');
   }
+  if(guessCount === 4) {
+    alert('Oh no! Too many guesses!');
+  }
+  console.log(guessCount, 'Guess Count');
 }
-
-while (answer6 !== 25 && guessCount < 4);
-
-
-// do {
-//
-//   if(answer6 < 25) {
-//     alert('Close! I\'m older than you think. Try again.');
-//     parseInt(prompt('How old am I?'));
-//     guessCount++;
-//   }
-//
-//   if(answer6 > 25) {
-//     alert('Close! I\'m younger than you think. Try again.');
-//     parseInt(prompt('How old am I?'));
-//     guessCount++;
-//
-//   } else {
-//     answer6 === 25;
-//     guessCount++;
-//   }
-// }
-// while (guessCount < 4 && answer6 !== 25);
 
 
 //Scoring Time!
