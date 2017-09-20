@@ -13,7 +13,7 @@ console.log('Do I have a fluffy cat? User response to Answer 1:', answer1);
 if(answer1 === 'y' || answer1 === 'yes') {
   alert('Yes! She moosh, she floof, she\'s very nice');
 } else {
-  alert('No no no no, I am sad to say you are wrong');
+  alert('No no no no, I am sad to say you are wrong. I definitely have a fluffy cat!');
 }
 
 //Question 2

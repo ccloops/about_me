@@ -10,6 +10,9 @@ img {
   border-radius: 50%;
 }
 
-h1, p {
+h1, h2, h3, p, a {
   border-style: none;
+}
+h3 {
+  color: white;
 }
