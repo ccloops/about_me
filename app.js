@@ -2,25 +2,28 @@
 
 var score = 0;
 
-function question1() {
+function initialQuestion() {
   //Class Example Question
   var userName = prompt('Hello!!! Welcome to me! Thanks for coming. What is your name?');
   alert('Hi, ' + userName + ', nice to meet you. See if you can get the right answers to the following questions about me.');
   console.log('User Name is', userName);
 }
-question1();
+initialQuestion();
 
-//Question 1
-var answer1 = prompt('Do I have a fluffy cat?').toLowerCase();
-console.log('Do I have a fluffy cat? User response to Answer 1:', answer1);
+function question1() {
+  //Question 1
+  var answer1 = prompt('Do I have a fluffy cat?').toLowerCase();
+  console.log('Do I have a fluffy cat? User response to Answer 1:', answer1);
 
-//you must repeat answer1 on both sides or it will result in a truthy problem
-if(answer1 === 'y' || answer1 === 'yes') {
-  alert('Yes! She moosh, she floof, she\'s very nice');
-  score++;
-} else {
-  alert('No no no no, I am sad to say you are wrong. I definitely have a fluffy cat!');
+  //you must repeat answer1 on both sides or it will result in a truthy problem
+  if(answer1 === 'y' || answer1 === 'yes') {
+    alert('Yes! She moosh, she floof, she\'s very nice');
+    score++;
+  } else {
+    alert('No no no no, I am sad to say you are wrong. I definitely have a fluffy cat!');
+  }
 }
+question1();
 
 //Question 2
 var answer2 = prompt('Do I hate karaoke?').toLowerCase();
