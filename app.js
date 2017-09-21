@@ -25,38 +25,48 @@ function question1() {
 }
 question1();
 
-//Question 2
-var answer2 = prompt('Do I hate karaoke?').toLowerCase();
-console.log('Do I hate karaoke? User response to Answer 2:', answer2);
+function question2() {
+  //Question 2
+  var answer2 = prompt('Do I hate karaoke?').toLowerCase();
+  console.log('Do I hate karaoke? User response to Answer 2:', answer2);
 
-if(answer2 === 'n' || answer2 === 'no') {
-  alert('Yea you got it right! I love karaoke!');
-  score++;
-} else {
-  alert('Awww, no I don\'t hate karaoke, it\'s the best!');
+  if(answer2 === 'n' || answer2 === 'no') {
+    alert('Yea you got it right! I love karaoke!');
+    score++;
+  } else {
+    alert('Awww, no I don\'t hate karaoke, it\'s the best!');
+  }
 }
+question2();
 
-//Question 3
-var answer3 = prompt('Do I know how to sail a sailboat?').toLowerCase();
-console.log('Do I know how to sail a sailboat? User response to Answer 3:', answer3);
+function question3(){
+  //Question 3
+  var answer3 = prompt('Do I know how to sail a sailboat?').toLowerCase();
+  console.log('Do I know how to sail a sailboat? User response to Answer 3:', answer3);
 
-if(answer3 === 'y' || answer3 === 'yes') {
-  alert('You know me so very kinda well, you are kinda right, I kinda know how!');
-  score++;
-} else {
-  alert('Surprise! You\'re kinda wrong, I kinda know how ; )');
+  if(answer3 === 'y' || answer3 === 'yes') {
+    alert('You know me so very kinda well, you are kinda right, I kinda know how!');
+    score++;
+  } else {
+    alert('Surprise! You\'re kinda wrong, I kinda know how ; )');
+  }
 }
+question3();
 
-//Question 4
-var answer4 = prompt('Is my house the color of grass?').toLowerCase();
-console.log('Is my house the color of grass? User response to Answer 4:', answer4);
+function question4() {
+  //Question 4
+  var answer4 = prompt('Is my house the color of grass?').toLowerCase();
+  console.log('Is my house the color of grass? User response to Answer 4:', answer4);
 
-if(answer4 === 'y' || answer4 === 'yes') {
-  alert('Yea, weirdo my house is green');
-  score++;
-} else {
-  alert('Trick question! Depends on whether or not it\'s been raining! But basically you got the answer wrong.');
+  if(answer4 === 'y' || answer4 === 'yes') {
+    alert('Yea, weirdo my house is green');
+    score++;
+  } else {
+    alert('Trick question! Depends on whether or not it\'s been raining! But basically you got the answer wrong.');
+  }
 }
+question4();
+
 
 //Question 5
 var answer5 = prompt('Do I like the rain?').toLowerCase();
