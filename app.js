@@ -2,10 +2,13 @@
 
 var score = 0;
 
-//Class Example Question
-var userName = prompt('Hello!!! Welcome to me! Thanks for coming. What is your name?');
-alert('Hi, ' + userName + ', nice to meet you. See if you can get the right answers to the following questions about me.');
-console.log('User Name is', userName);
+function question1() {
+  //Class Example Question
+  var userName = prompt('Hello!!! Welcome to me! Thanks for coming. What is your name?');
+  alert('Hi, ' + userName + ', nice to meet you. See if you can get the right answers to the following questions about me.');
+  console.log('User Name is', userName);
+}
+question1();
 
 //Question 1
 var answer1 = prompt('Do I have a fluffy cat?').toLowerCase();
