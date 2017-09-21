@@ -97,29 +97,31 @@ var hairColors = ['blonde', 'red', 'blue', 'pink', 'green'];
 while (hairColorGuessCount < 7) {
   var answer7 = prompt('Can you guess a color that my hair has been?');
   console.log('What colors have my hair been? User response to Question 7', answer7);
+  
+  if(answer7 === hairColors[i]) {
+    alert('Congratulations! You guessed a correct answer!');
+    break;
+  } else {
+    alert('Nope! Try again!');
+    hairColorGuessCount++;
+  }
+  if(hairColorGuessCount === 6) {
+    alert('Too many guesses! Better luck next time!');
+  }
+  //
+  // if(answer7 === 'blonde' || 'red' || 'blue' || 'pink' || 'green') {
+  //   alert('Congratulations! You guessed a correct answer!');
+  //   hairColorGuessCount++;
+  //   break;
+  // } else {
+  //   alert('Nope! Try again!');
+  //   hairColorGuessCount++;
+  // }
 
-  if(answer7 === 'blonde' || 'red' || 'blue' || 'pink' || 'green') {
-    alert('Congratulations! You guessed a correct answer!');
-    hairColorGuessCount++;
-    break;
-  } else {
-    alert('Nope! Try again!');
-    hairColorGuessCount++;
-  }
-  if(answer7 === 'blonde' || 'red' || 'blue' || 'pink' || 'green') {
-    alert('Congratulations! You guessed a correct answer!');
-    hairColorGuessCount++;
-    break;
-  } else {
-    alert('Nope! Try again!');
-    hairColorGuessCount++;
-  }
   for (var i = 0; i < hairColors.length; i++) {
+
   }
 }
-
-
-
 
 //Scoring Time!
 

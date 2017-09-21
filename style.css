@@ -26,3 +26,10 @@ li {
   border-style: none;
   text-align: left;
 }
+
+ul {
+  border-style: dashed;
+  width: 200px;
+  margin: 0px auto;
+  padding: 20px 30px;
+}
