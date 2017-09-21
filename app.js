@@ -2,16 +2,13 @@
 
 var score = 0;
 
-// function initialQuestion() {
   //Class Example Question
   var userName = prompt('Hello!!! Welcome to me! Thanks for coming. What is your name?');
   alert('Hi, ' + userName + ', nice to meet you. See if you can get the right answers to the following questions about me.');
   console.log('User Name is', userName);
-// }
-// initialQuestion();
-//
+
+//Question 1
 function question1() {
-  //Question 1
   var answer1 = prompt('Do I have a fluffy cat?').toLowerCase();
   console.log('Do I have a fluffy cat? User response to Answer 1:', answer1);
 
@@ -25,8 +22,8 @@ function question1() {
 }
 question1();
 
+//Question 2
 function question2() {
-  //Question 2
   var answer2 = prompt('Do I hate karaoke?').toLowerCase();
   console.log('Do I hate karaoke? User response to Answer 2:', answer2);
 
@@ -39,8 +36,8 @@ function question2() {
 }
 question2();
 
+//Question 3
 function question3(){
-  //Question 3
   var answer3 = prompt('Do I know how to sail a sailboat?').toLowerCase();
   console.log('Do I know how to sail a sailboat? User response to Answer 3:', answer3);
 
@@ -53,8 +50,8 @@ function question3(){
 }
 question3();
 
+//Question 4
 function question4() {
-  //Question 4
   var answer4 = prompt('Is my house the color of grass?').toLowerCase();
   console.log('Is my house the color of grass? User response to Answer 4:', answer4);
 
@@ -67,8 +64,8 @@ function question4() {
 }
 question4();
 
+//Question 5
 function question5() {
-  //Question 5
   var answer5 = prompt('Do I like the rain?').toLowerCase();
   console.log('Do I like the rain? User response to Answer 5:', answer5);
 
@@ -81,8 +78,8 @@ function question5() {
 }
 question5();
 
+//Question 6
 function question6() {
-  //Question 6
   var guessCount = 0;
   while (answer6 !== 25 && guessCount < 4) {
     var answer6 = parseInt(prompt('How old am I? You have 4 opportunities to answer correctly. Good luck'));
@@ -109,40 +106,40 @@ function question6() {
 question6();
 
 //Question 7: As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers
+function question7() {
+  var numberGuessesRemaining = 6;
 
-var numberGuessesRemaining = 6;
+  var hairColors = ['blonde', 'red', 'blue', 'pink', 'green'];
 
-var hairColors = ['blonde', 'red', 'blue', 'pink', 'green'];
+  while (numberGuessesRemaining > 0) {
+    var answer7 = prompt('Can you guess a color that my hair has been?');
+    console.log('What colors have my hair been? User response to Question 7', answer7);
+    numberGuessesRemaining--;
 
-while (numberGuessesRemaining > 0) {
-  var answer7 = prompt('Can you guess a color that my hair has been?');
-  console.log('What colors have my hair been? User response to Question 7', answer7);
-  numberGuessesRemaining--;
+    for(var i = 0; i < hairColors.length; i++) {
 
-  for(var i = 0; i < hairColors.length; i++) {
+      if(answer7 === hairColors[i]) {
+        alert('Congratulations! You guessed a correct answer!');
+        numberGuessesRemaining = -1;
+        score++;
+        break;
+      }
+    }
 
-    if(answer7 === hairColors[i]) {
-      alert('Congratulations! You guessed a correct answer!');
-      numberGuessesRemaining = -1;
-      score++;
-      break;
+    if(numberGuessesRemaining > 0) {
+      alert('Nope! Try again! You have ' + numberGuessesRemaining + ' guesses remaining');
+    }
+
+    if(numberGuessesRemaining === 0) {
+      alert('Too many guesses! My hair has been many colors: blonde, red, blue, pink and green');
     }
   }
-
-  if(numberGuessesRemaining > 0) {
-    alert('Nope! Try again! You have ' + numberGuessesRemaining + ' guesses remaining');
-  }
-
-  if(numberGuessesRemaining === 0) {
-    alert('Too many guesses! My hair has been many colors: blonde, red, blue, pink and green');
-  }
 }
+question7();
 
 //Scoring Time!
 
-console.log('Am I broken?');
 if(score === 0) {
-  console.log('Inside scoring broken?');
   alert('Booooooo! You answered 0 out of 7 questions correctly. I am so disappointed.');
 } else if(score === 1) {
   alert('Terrible job,' + userName + '. You answered 1 out of 7 questions correctly.');
@@ -159,4 +156,3 @@ if(score === 0) {
 } else {
   alert('Heck ya! You won, ' + userName + '! You answered all 7 questions correctly!');
 }
-console.log('Did we fix it?');
