@@ -117,7 +117,6 @@ while (numberGuessesRemaining > 0) {
   }
 }
 
-
 //Scoring Time!
 
 if(score === 0) {
