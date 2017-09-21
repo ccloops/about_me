@@ -90,30 +90,30 @@ while (answer6 !== 25 && guessCount < 4) {
 
 //Question 7: As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers
 
-var hairColorGuessCount = 0;
+var numberGuessesRemaining = 0;
 
 var hairColors = ['blonde', 'red', 'blue', 'pink', 'green'];
 
-while (hairColorGuessCount < 7) {
+while (numberGuessesRemaining > 0) {
   var answer7 = prompt('Can you guess a color that my hair has been?');
   console.log('What colors have my hair been? User response to Question 7', answer7);
+  numberGuessesRemaining--;
 
   for(var i = 0; i < hairColors.length; i++) {
 
     if(answer7 === hairColors[i]) {
       alert('Congratulations! You guessed a correct answer!');
+      numberGuessesRemaining = -1;
       break;
     }
   }
 
-  if(answer7 !== hairColors[i]) {
-    alert('Nope! Try again!');
+  if(numberGuessesRemaining > 0) {
+    alert('Nope! Try again! You have ' + numberGuessesRemaining + ' guesses remaining');
   }
 
-  hairColorGuessCount++;
-
-  if(hairColorGuessCount === 7) {
-    alert('Too many guesses! Better luck next time!');
+  if(numberGuessesRemaining === 0) {
+    alert('Too many guesses! My hair has been many colors: blonde, red, blue, pink and green');
   }
 }
 
