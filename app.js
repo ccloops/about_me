@@ -67,43 +67,46 @@ function question4() {
 }
 question4();
 
+function question5() {
+  //Question 5
+  var answer5 = prompt('Do I like the rain?').toLowerCase();
+  console.log('Do I like the rain? User response to Answer 5:', answer5);
 
-//Question 5
-var answer5 = prompt('Do I like the rain?').toLowerCase();
-console.log('Do I like the rain? User response to Answer 5:', answer5);
-
-if(answer5 === 'y' || answer5 === 'yes') {
-  alert('Yeaaaaa, yea I do : )');
-  score++;
-} else {
-  alert('Hey now! I have to like it at least a little right?');
-}
-
-var guessCount = 0;
-
-//Question 6
-
-while (answer6 !== 25 && guessCount < 4) {
-  var answer6 = parseInt(prompt('How old am I? You have 4 opportunities to answer correctly. Good luck'));
-  console.log('How old am I? User response to Answer 6:', answer6);
-
-  if(answer6 === 25) {
-    guessCount++;
-    alert('Congratulations! You guessed correctly! I\'m 25 for now.');
+  if(answer5 === 'y' || answer5 === 'yes') {
+    alert('Yeaaaaa, yea I do : )');
     score++;
-    break;
-  } else if(answer6 < 25) {
-    guessCount++;
-    alert('Nope! I\'m older than you think! Try again.');
-  } else if(answer6 > 25) {
-    guessCount++;
-    alert('Nope! I\'m younger than you think! Try again.');
+  } else {
+    alert('Hey now! I have to like it at least a little right?');
   }
-  if(guessCount === 4) {
-    alert('Oh no! You\'re all out of guesses! Better luck next time!');
-  }
-  console.log('Guess Count:', guessCount);
 }
+question5();
+
+function question6() {
+  //Question 6
+  var guessCount = 0;
+  while (answer6 !== 25 && guessCount < 4) {
+    var answer6 = parseInt(prompt('How old am I? You have 4 opportunities to answer correctly. Good luck'));
+    console.log('How old am I? User response to Answer 6:', answer6);
+
+    if(answer6 === 25) {
+      guessCount++;
+      alert('Congratulations! You guessed correctly! I\'m 25 for now.');
+      score++;
+      break;
+    } else if(answer6 < 25) {
+      guessCount++;
+      alert('Nope! I\'m older than you think! Try again.');
+    } else if(answer6 > 25) {
+      guessCount++;
+      alert('Nope! I\'m younger than you think! Try again.');
+    }
+    if(guessCount === 4) {
+      alert('Oh no! You\'re all out of guesses! Better luck next time!');
+    }
+    console.log('Guess Count:', guessCount);
+  }
+}
+question6();
 
 //Question 7: As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers
 
