@@ -2,14 +2,14 @@
 
 var score = 0;
 
-function initialQuestion() {
+// function initialQuestion() {
   //Class Example Question
   var userName = prompt('Hello!!! Welcome to me! Thanks for coming. What is your name?');
   alert('Hi, ' + userName + ', nice to meet you. See if you can get the right answers to the following questions about me.');
   console.log('User Name is', userName);
-}
-initialQuestion();
-
+// }
+// initialQuestion();
+//
 function question1() {
   //Question 1
   var answer1 = prompt('Do I have a fluffy cat?').toLowerCase();
@@ -90,6 +90,7 @@ while (answer6 !== 25 && guessCount < 4) {
   if(answer6 === 25) {
     guessCount++;
     alert('Congratulations! You guessed correctly! I\'m 25 for now.');
+    score++;
     break;
   } else if(answer6 < 25) {
     guessCount++;
@@ -120,6 +121,7 @@ while (numberGuessesRemaining > 0) {
     if(answer7 === hairColors[i]) {
       alert('Congratulations! You guessed a correct answer!');
       numberGuessesRemaining = -1;
+      score++;
       break;
     }
   }
@@ -135,7 +137,9 @@ while (numberGuessesRemaining > 0) {
 
 //Scoring Time!
 
+console.log('Am I broken?');
 if(score === 0) {
+  console.log('Inside scoring broken?');
   alert('Booooooo! You answered 0 out of 7 questions correctly. I am so disappointed.');
 } else if(score === 1) {
   alert('Terrible job,' + userName + '. You answered 1 out of 7 questions correctly.');
@@ -152,3 +156,4 @@ if(score === 0) {
 } else {
   alert('Heck ya! You won, ' + userName + '! You answered all 7 questions correctly!');
 }
+console.log('Did we fix it?');
