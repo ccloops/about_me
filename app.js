@@ -7,39 +7,43 @@ var userName = prompt('Hello!!! Welcome to me! Thanks for coming. What is your n
 alert('Hi, ' + userName + ', nice to meet you. See if you can get the right answers to the following questions about me.');
 console.log('User Name is', userName);
 
-var questionsArray = ['Do I have a fluffy cat?',
-  'Do I hate karaoke?',
-  'Do I know how to sail a sailboat?',
-  'Is my house the color of grass?',
-  'Do I like the rain?'];
-var correctAnswerArray = ['y', 'n', 'y', 'y', 'y'];
-var correctResponseArray = ['Yes! She moosh, she floof, she\'s very nice',
-  'Yea you got it right! I love karaoke!',
-  'You know me so very kinda well, you are kinda right, I kinda know how!',
-  'Yea, weirdo my house is green',
-  'Yeaaaaa, yea I do : )'];
-var wrongResponseArray = ['No no no no, I am sad to say you are wrong. I definitely have a fluffy cat!',
-  'Awww, no I don\'t hate karaoke, it\'s the best!',
-  'Surprise! You\'re kinda wrong, I kinda know how ; )',
-  'Trick question! Depends on whether or not it\'s been raining! But basically you got the answer wrong.',
-  'Hey now! I have to like it at least a little right?'];
+function questionType1() {
+  var questionsArray = ['Do I have a fluffy cat?',
+    'Do I hate karaoke?',
+    'Do I know how to sail a sailboat?',
+    'Is my house the color of grass?',
+    'Do I like the rain?'];
+  var correctAnswerArray = ['y', 'n', 'y', 'y', 'y'];
+  var correctResponseArray = ['Yes! She moosh, she floof, she\'s very nice',
+    'Yea you got it right! I love karaoke!',
+    'You know me so very kinda well, you are kinda right, I kinda know how!',
+    'Yea, weirdo my house is green',
+    'Yeaaaaa, yea I do : )'];
+  var wrongResponseArray = ['No no no no, I am sad to say you are wrong. I definitely have a fluffy cat!',
+    'Awww, no I don\'t hate karaoke, it\'s the best!',
+    'Surprise! You\'re kinda wrong, I kinda know how ; )',
+    'Trick question! Depends on whether or not it\'s been raining! But basically you got the answer wrong.',
+    'Hey now! I have to like it at least a little right?'];
 
-for(var i = 0; i < questionsArray.length; i++) {
-  var a = prompt(questionsArray[i]).toLowerCase();
-  if(a === ('yes' || 'y')) {
-    a = 'y';
-  } else if(a === ('no' || 'n')) {
-    a = 'n';
-  } else {
-    alert('Invalid Input');
-  }
-  if(a === correctAnswerArray[i]) {
-    alert(correctResponseArray[i]);
-    score++;
-  } else {
-    alert(wrongResponseArray[i]);
+  for(var i = 0; i < questionsArray.length; i++) {
+    var a = prompt(questionsArray[i]).toLowerCase();
+    if (a === ('yes' || 'y')) {
+      a = 'y';
+    } else if (a === ('no' || 'n')) {
+      a = 'n';
+    } else {
+      alert('Invalid Input - Sorry I\'m gonna count that as a wrong answer!');
+    }
+    if(a === correctAnswerArray[i]) {
+      alert(correctResponseArray[i]);
+      score++;
+    } else {
+      alert(wrongResponseArray[i]);
+    }
   }
 }
+
+//OLD CODE
 
 // //Question 1
 // function question1() {
@@ -113,7 +117,7 @@ for(var i = 0; i < questionsArray.length; i++) {
 // question5();
 
 //Question 6
-function question6() {
+function questionType2() {
   var guessCount = 0;
   while (answer6 !== 25 && guessCount < 4) {
     var answer6 = parseInt(prompt('How old am I? You have 4 opportunities to answer correctly. Good luck'));
@@ -137,10 +141,9 @@ function question6() {
     console.log('Guess Count:', guessCount);
   }
 }
-question6();
 
 //Question 7: As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers
-function question7() {
+function questionType3() {
   var numberGuessesRemaining = 6;
 
   var hairColors = ['blonde', 'red', 'blue', 'pink', 'green'];
@@ -169,8 +172,10 @@ function question7() {
     }
   }
 }
-question7();
 
+for(var i = 1; i < 4; i++) {
+  eval('questionType' + i + '()');
+}
 //Scoring Time!
 
 if(score === 0) {
