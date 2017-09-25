@@ -5,4 +5,4 @@
 
 ### Driver was Catherine and Navigator was Birdie
 
-###Updated JS Code with stretch goals. Added arrays to Questions 1-5. Called all functions at one time at the bottom of the code using an eval function. Commented out initial code that was submitted.
+### Updated JS Code with stretch goals. Added arrays to Questions 1-5. Called all functions at one time at the bottom of the code using an eval function. Commented out initial code that was submitted.
